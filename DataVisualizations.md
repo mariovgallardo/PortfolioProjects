@@ -1,5 +1,5 @@
 # PortfolioProjects
-A few of my projects!
+Hello! Welcome to my data analytics portfolio. Here are a few of my projects!
 
 𝐇𝐨𝐥𝐝𝐢𝐧𝐠: Google Data Analytics Certification.
 
