@@ -1,4 +1,4 @@
-# PortfolioProjects
+# Mario Gallardo's Portfolio Projects
 ## Hello! Welcome to my data analytics portfolio. Here are a few of my projects!
 
 Holding: Google Data Analytics Certification.
