@@ -17,4 +17,4 @@ Please access the below link for my Tableau Visualization Portfolio.
 
 - SQL COVID Data Exploration in Google BigQuery
 
-- SQL Housing Data Cleaning in Google BigQuery
+- SQL Housing Data Cleaning with MySQL
