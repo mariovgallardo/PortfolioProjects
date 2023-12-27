@@ -1,7 +1,7 @@
 # Mario Gallardo's Portfolio Projects
 ## Hello! Welcome to my data analytics portfolio. Here are a few of my projects!
 
-Holding: Google Data Analytics Certification.
+Holding: Google Data Analytics Certification, Python for Data Analysis and Visualization
 
 Please access the below link for my full Case Study on Bellabeat done in R. 
 
