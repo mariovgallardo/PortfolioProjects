@@ -1,0 +1,54 @@
+-- Create a join table 
+Select*
+From absenteeism_at_work a
+Left join compensation b
+	on a.ID = b.ID
+left join Reasons r 
+on a.`Reason for absence` = r.Number
+
+-- Find the healthiest out of all staff for a bonus
+select *
+From absenteeism_at_work
+Where `Social drinker` = 0 and `Social smoker` = 0
+and `Body mass index` < 25 and 
+`Absenteeism time in hours` < (select AVG(`Absenteeism time in hours`) From absenteeism_at_work)
+
+-- Compensation rate increase for non-smokers (budget is $983,221, so .68 increase per hour / $1,414.4 per year)
+select count(*) as nonsmokers
+From absenteeism_at_work
+Where `Social smoker` = 0
+
+-- Optimizing the join query above
+SELECT
+	a.ID,
+    r.Reason,
+    `Month of absence`,
+    `Body mass index`,
+CASE WHEN `Body mass index` < 18.5 then 'Underweight' 
+	 WHEN `Body mass index` between 18.5 and 25 then 'Healthy Weight'
+     WHEN `Body mass index` between 25 and 30 then 'Overweight' 
+     WHEN `Body mass index` > 30 then 'Obese' 
+     Else 'Unknown' END as BMI_Category,   
+CASE WHEN `Month of absence` IN (12,1,2) THEN 'Winter'
+	 WHEN `Month of absence` IN (3,4,5) THEN 'Spring'
+     WHEN `Month of absence`IN (6,7,8) THEN 'Summer'
+     WHEN `Month of absence` IN (9,10,11) THEN 'Fall'
+    Else 'Unknown' END as Season_Names,
+Seasons,
+`Month of absence`,
+`Day of the week`,
+`Transportation expense`,
+Education,
+Son,
+`Social drinker`,
+`Social smoker`,
+Pet,
+`Disciplinary failure`,
+Age,
+`Work load Average/day`,
+`Absenteeism time in hours`
+From absenteeism_at_work a
+Left join compensation b
+	on a.ID = b.ID
+left join Reasons r 
+on a.`Reason for absence` = r.Number
