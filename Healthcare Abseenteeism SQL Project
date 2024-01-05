@@ -1,3 +1,4 @@
+-- Data pulled from: https://absentdata.com/wp-content/uploads/2023/09/Absenteeism_at_work-1.zip
 -- Create a join table 
 Select*
 From absenteeism_at_work a
